@@ -10,17 +10,25 @@
 
 
 #include "lvgl.h"
-#include "app_hal.h"
+
+// #include "driver.h"
 
 #include "demo.h"
 
-int main(void)
+int app_main(void)
 {
-	lv_init();
+    lv_init();
 
-	hal_setup();
+    /* Initialize your hardware. */
+    
+    /* hw_init(); */
 
-	demo_create();
+    demo_create();
 
-	hal_loop();
+    /* Create the UI or start a task for it.
+     * In the end, don't forget to call `lv_task_handler` in a loop. */
+
+    /* hw_loop(); */
+
+    return 0;
 }
